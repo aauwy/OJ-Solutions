@@ -60,3 +60,28 @@ int main()
 	//system("pause");
 	return 0;
 }
+/*
+#include<stdio.h> 
+int main()
+{   
+int C,m,n,i,j;
+unsigned long long  f[20]={0,1,3},c[20][20]={{1},{2,1}},s;   
+for(i=2;i<20;i++)
+{
+f[i]=(i-1)*(f[i-1]+f[i-2]);
+
+c[i][0]=i+1;
+c[i][i]=1;
+for(j=1;j<i;j++)
+c[i][j]=c[i-1][j-1]+c[i-1][j];
+}
+  scanf("%d",&C);
+while(C--)
+{
+scanf("%d%d",&n,&m);
+   s=f[m-1]*c[n-1][m-1];
+        printf("%I64d\n",s);
+}
+return 0;
+}
+*/
